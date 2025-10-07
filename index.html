@@ -3,36 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hotel El Paraiso Bumanguez</title>
+  <title>Hotel El Rincon Del Carmen</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="overlay">
-          <h1>Hotel El Paraiso Bumanguez</h1>
-          <p>Una experiencia de descanso, confort y elegancia</p>
-          <a href="reservas.html" class="btn">Reservar ahora</a>
-        </div>
-      </header>
-      <nav class="main-nav">
-        <div class="logo">Hotel El Paraiso Bumanguez</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="reservas.html">Reservas</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Hotel El Rincon Del Carmen</h1>
+      <p>Una experiencia de descanso, confort y elegancia</p>
+      <a href="reservas.html" class="btn">Reservar ahora</a>
+    </div>
+  </header>
 
-        <main class="container">
-    
+  <nav class="main-nav">
+    <div class="logo">Hotel El Paraiso Bumanguez</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <!-- Carrusel de fotos (espacio listo para insertar JS después) -->
+  <main class="container">
+    <!-- Carrusel de fotos (con botones de navegación) -->
     <section class="carousel-section">
       <h2>Nuestras habitaciones</h2>
-      <div class="carousel" id="carousel-habitaciones">
-        <!-- Aquí irán las imágenes del carrusel -->
+      <div class="carousel-container">
+        <button class="carousel-button left" id="btn-prev">&#10094;</button>
+        
+        <div class="carousel" id="carousel-habitaciones">
+          <div class="carousel-item">
+            <img src="images/habitacion4.jpg" alt="Habitación 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/habitacion2.webp" alt="Habitación 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/habitacion3.jpg" alt="Habitación 3">
+          </div>
+        </div>
+
+        <button class="carousel-button right" id="btn-next">&#10095;</button>
       </div>
     </section>
 
@@ -61,11 +73,13 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Hotel El Paraiso Bumanguez</p>
+    <p>&copy; 2025 Hotel El Rincon Del Carmen</p>
   </footer>
 
-</body>
-<script type="module" src="js/main.js"></script>
-<script src="js/component/room-card.js"></script>
-</html>
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script src="js/component/room-card.js"></script>
 
+</body>
+</html>

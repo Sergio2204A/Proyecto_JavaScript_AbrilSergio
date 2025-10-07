@@ -3,50 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reservas - Hotel El Rincón del Carmen</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Reservas - Hotel El Rincon Del Carmen</title>
+  <link rel="stylesheet" href="css/reservas.css" />
 </head>
 <body>
 
-  <header>
+  <header class="main-header">
     <h1>Reserva tu estancia</h1>
-    <nav>
+    <nav class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="reservas.html">Reservas</a>
+      <a href="reservas.html" class="active">Reservas</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
-  <main>
-    <section>
+  <main class="container">
+    <section class="busqueda">
       <h2>Buscar disponibilidad</h2>
-      <form id="search-form">
-        <label>
-          Fecha de entrada:
-          <input type="date" id="fecha-entrada" required />
-        </label>
-        <label>
-          Fecha de salida:
-          <input type="date" id="fecha-salida" required />
-        </label>
-        <label>
-          Personas:
-          <input type="number" id="personas" min="1" required />
-        </label>
-        <button type="submit">Buscar</button>
+      <form class="busqueda-form">
+        <div class="form-group">
+          <label for="entrada">Fecha de entrada:</label>
+          <input type="date" id="entrada" name="entrada" required>
+        </div>
+        <div class="form-group">
+          <label for="salida">Fecha de salida:</label>
+          <input type="date" id="salida" name="salida" required>
+        </div>
+        <div class="form-group">
+          <label for="personas">Personas:</label>
+          <input type="number" id="personas" name="personas" min="1" max="10" required>
+        </div>
+        <button type="submit" class="btn-buscar">Buscar</button>
       </form>
     </section>
 
-    <section>
+    <section class="habitaciones">
       <h2>Habitaciones disponibles</h2>
-      <div id="resultados"></div>
+      <!-- Aquí se mostrarán las habitaciones según la búsqueda -->
+      <div class="habitacion-card">
+        <img src="images/habitacion2.webp" alt="Habitación estándar">
+        <div class="info">
+          <h3>Habitación estándar</h3>
+          <p>1 cama doble, baño privado, aire acondicionado, TV y Wi-Fi.</p>
+          <p><strong>$250.000 COP / noche</strong></p>
+          <button class="btn-reservar">Reservar</button>
+        </div>
+      </div>
+      <div class="habitacion-card">
+        <img src="images/habitacion3.jpg" alt="Habitación estándar">
+        <div class="info">
+          <h3>Habitación vip</h3>
+          <p>1 cama doble, baño lujoso privado, aire acondicionado y calefaccion, TV y Wi-Fi.</p>
+          <p><strong>$400.000 COP / noche</strong></p>
+          <button class="btn-reservar">Reservar</button>
+        </div>
+      </div>
+      <div class="habitacion-card">
+        <img src="images/habitacion4.jpg" alt="Habitación estándar">
+        <div class="info">
+          <h3>Habitación vip max</h3>
+          <p>1 cama doble, baño privado y jacuzzi, aire acondicionado y calefaccion con servicio a la habitacion del Restaurante, TV y Wi-Fi.</p>
+          <p><strong>$700.000 COP / noche</strong></p>
+          <button class="btn-reservar">Reservar</button>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Hotel El Rincón del Carmen</p>
+  <footer class="footer">
+    <p>&copy; 2025 Hotel El Rincon Del Carmen</p>
   </footer>
 
-  <script type="module" src="assets/js/reservas.js"></script>
 </body>
 </html>
+

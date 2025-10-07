@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .main-header {
+    background-color: #004d47;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+  }
+  
+  .nav-links a {
+    color: #f1f1f1;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav-links a.active,
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Búsqueda */
+  .busqueda {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .busqueda-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .btn-buscar {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-buscar:hover {
+    background-color: #219150;
+  }
+  
+  /* Habitaciones */
+  .habitaciones {
+    padding: 1rem 0;
+  }
+  
+  .habitacion-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  .habitacion-card img {
+    width: 40%;
+    object-fit: cover;
+  }
+  
+  .habitacion-card .info {
+    padding: 1rem;
+    flex: 1;
+  }
+  
+  .btn-reservar {
+    margin-top: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #2b80b9;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ecf0f1;
+    color: #555;
+    font-size: 0.9rem;
+  }
+    .footer a {
+        color: #3498db;
+        text-decoration: none;
+    }

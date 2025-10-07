@@ -92,6 +92,75 @@ body {
   color: #f8f8f8;
 }
 
+.carousel-section {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ancho total */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* Para que haga snap al pasar */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 70%; /* Cada item ocupa el 100% del ancho del carrusel */
+  scroll-snap-align: start;
+  position: relative;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 70%;
+  height: auto; /* Mantiene proporción */
+  display: block;
+  object-fit: cover; /* Para que la imagen cubra el área sin deformarse */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-40%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 80%;
+  }
+}
+
 /* Navegación */
 .nav-links a {
   color: white;
