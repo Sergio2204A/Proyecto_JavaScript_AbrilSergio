@@ -7,7 +7,7 @@ body {
   }
   
   header {
-    background: #005c57;
+    background: #004d47;
     color: white;
     padding: 1em;
     text-align: center;
@@ -74,4 +74,47 @@ body {
   .nav-links li a:hover {
     color: #c8a165; /* dorado suave */
   }
-  
+  /* Estilo para la barra superior */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d47; /* Color más oscuro y elegante */
+  padding: 15px 40px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para el título del hotel */
+.logo h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #f8f8f8;
+}
+
+/* Navegación */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00d1b2; /* Color de acento al pasar el cursor */
+}
+.btn-reserva {
+  background-color: #00bfa5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reserva:hover {
+  background-color: #008f7a;
+}
