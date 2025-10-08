@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración - Hotel</title>
+  <link rel="stylesheet" href="css/admin.css" />
+
+<body>
+  <header>
+    Panel de Administración - Hotel
+  </header>
+
+  <main>
+    <!-- Sección gestión de habitaciones -->
+    <section id="gestion-habitaciones">
+      <h2>Gestión de Habitaciones</h2>
+
+      <form id="form-habitacion">
+        <input type="text" id="numero" placeholder="Número de habitación" required />
+        <input type="text" id="tipo" placeholder="Tipo de habitación (Ej: Doble, Suite...)" required />
+        <input type="number" id="precio" placeholder="Precio por noche" required />
+        <textarea id="descripcion" placeholder="Descripción de la habitación" required></textarea>
+        <button type="submit">Agregar habitación</button>
+      </form>
+
+      <div id="lista-habitaciones"></div>
+    </section>
+    <!-- Contenedores -->
+<div id="adminHabitaciones"></div>
+<div id="adminReservas"></div>
+
+<!-- Formulario de habitaciones -->
+<form onsubmit="event.preventDefault(); guardarHabitacion();">
+  <input type="hidden" id="idHabitacionEditando">
+  <input id="nombreHabitacion" placeholder="Nombre de habitación">
+  <input id="capacidadHabitacion" type="number" placeholder="Capacidad">
+  <input id="precioHabitacion" type="number" placeholder="Precio por noche">
+  <textarea id="descripcionHabitacion" placeholder="Descripción"></textarea>
+  <button type="submit">Guardar</button>
+  <button type="button" onclick="limpiarFormularioHabitacion()">Limpiar</button>
+</form>
+
+
+    <!-- Sección gestión de reservas -->
+    <section id="gestion-reservas">
+      <h2>Gestión de Reservas</h2>
+      <div id="lista-reservas"></div>
+    </section>
+  </main>
+</body>
+<script src="js/storage-init.js" defer></script>
+<script src="js/auth.js" defer></script>
+<script src="js/availability.js" defer></script>
+<script src="js/admin.js" defer></script>
+</head>
+</html>

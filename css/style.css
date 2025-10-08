@@ -21,8 +21,63 @@ body {
   
   .hero {
     margin-top: 60px; /* Altura de la barra de navegación */
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  .hero {
+    background-image: url('../images/hotel.jpg'); /* cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* altura del banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
   }
   
+  /* Capa de oscurecimiento */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* efecto oscuro sobre la imagen */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #c9302c;
+  }
   
   section {
     padding: 2em;
@@ -101,7 +156,8 @@ body {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  width: 100%; /* Ancho total */
+  width: 80%; /* Ancho total */
+
 }
 
 .carousel {
@@ -121,8 +177,8 @@ body {
 }
 
 .carousel-item img {
-  width: 70%;
-  height: auto; /* Mantiene proporción */
+  width: 50%;
+  height: 340px; /* Mantiene proporción */
   display: block;
   object-fit: cover; /* Para que la imagen cubra el área sin deformarse */
 }
@@ -186,4 +242,54 @@ body {
 
 .btn-reserva:hover {
   background-color: #008f7a;
+}
+.areas {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.area-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.area-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.area-info {
+  padding: 1rem;
+}
+
+.area-info h3 {
+  color: #004d7a;
+  margin-bottom: 0.5rem;
+}
+
+.area-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .carousel img {
+    height: 300px;
+  }
 }
