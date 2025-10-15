@@ -45,7 +45,24 @@
     <!-- Sección gestión de reservas -->
     <section id="gestion-reservas">
       <h2>Gestión de Reservas</h2>
-      <div id="lista-reservas"></div>
+      <table border="1">
+        <tr>
+          <th>ID Reserva</th>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+        <tr>
+          <td>12345</td>
+          <td>Juan Pérez</td>
+          <td>2025-10-15</td>
+          <td>
+            <form action="#" method="POST" onsubmit="hacerCheckIn(event, '12345')">
+              <button type="submit">Hacer Check-in</button>
+            </form>
+          </td>
+        </tr>
+      </table>      
     </section>
   </main>
 </body>
@@ -53,5 +70,11 @@
 <script src="js/auth.js" defer></script>
 <script src="js/availability.js" defer></script>
 <script src="js/admin.js" defer></script>
+<script>
+  function hacerCheckIn(event, idReserva) {
+    event.preventDefault();
+    alert("Check-in realizado para la reserva " + idReserva);
+  }
+</script>
 </head>
 </html>

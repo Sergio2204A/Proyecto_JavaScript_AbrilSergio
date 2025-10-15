@@ -10,10 +10,24 @@
 </head>
 <body>
 
-  <header class="header">
-    <h1>Reservar Habitación</h1>
-    <a href="index.html" class="volver">← Volver al inicio</a>
+    <header class="main-header">
+      <h1>Reserva tu estancia</h1>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="reservas.html" class="active">Reservas</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="politicas.html">politicas</a>
+      </nav>
+    </header>
+  
   </header>
+  <label>
+    <input type="checkbox" name="acepta_politicas" required>
+    He leído y acepto las 
+    <a href="politicas.html" target="_blank">políticas del Hotel El Rincón del Carmen</a>.
+  </label>
+  <br><br>
+  
 
   <main class="container">
     <form id="formReserva" class="formulario">
@@ -47,6 +61,8 @@
   </main>
 
   <script src="js/reservas.js"></script>
+  <script src="js/autenticacion.js"></script>
+  <script src="js/disponibilidad.js"></script>
 
 </body>
 </html>
